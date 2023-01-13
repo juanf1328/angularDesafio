@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// import { Router } from '@angular/router';
+// import { UsersService } from "../users/users.service";
+
+ import { Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,13 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  // user: string;
+  // password: string;
+
+ constructor(private route : Router) { }
 
   ngOnInit(): void {
   }
+  // login() {
+  //   const user = {email: this.user, password: this.password};
+  //   this.userService.login(user).subscribe( data => {
+  //     console.log(data);
+  //   });
 
-// btnClick = function (){
-//   this.router.navigateByUrl('/angularDesafio/src/pages/options');
-// }
+btnClick(){
+  this.route.navigate(["empleado"])
+}
 
 }

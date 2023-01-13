@@ -29,10 +29,12 @@ const routes: Routes = [
   {
     path: 'rrhh',
     component: RrhhComponent,
+    pathMatch: "full"
   },
   {
     path: 'seguridad',
     component: SeguridadComponent,
+    pathMatch: "full"
   },
   {
     path: 'error',
@@ -45,7 +47,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

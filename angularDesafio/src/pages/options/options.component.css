@@ -57,7 +57,7 @@ h4 {
 }
 .btn {
   height: 50px;
-  width: 130px;
+  width: 230px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,3 +117,7 @@ h4 {
   width: 100vw;
   z-index: -1;
  }
+/* .iconAdmin{
+  background:url(/angularDesafio/src/pictures/login-elegir-rol/admin-white.png) no-repeat left center;
+  background-size: 10px;
+} */

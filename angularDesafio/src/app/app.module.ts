@@ -12,6 +12,8 @@ import { ErrorComponent } from '../pages/error/error.component';
 import { OptionsComponent } from '../pages/options/options.component';
 import { RrhhComponent } from '../pages/rrhh/rrhh.component';
 import { SeguridadComponent } from '../pages/seguridad/seguridad.component';
+// import { SidenavComponent } from '../pages/sidenav/sidenav.component';
+
 
 @NgModule({
   declarations: [
@@ -22,14 +24,11 @@ import { SeguridadComponent } from '../pages/seguridad/seguridad.component';
     ErrorComponent,
     OptionsComponent,
     RrhhComponent,
-    SeguridadComponent
+    SeguridadComponent,
+    // SidenavComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
