@@ -1,1 +1,123 @@
-<p>admin works!</p>
+<mat-toolbar class="mat-elevation-z8">
+   <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened" style="display: inline-flex;">
+      <img src='../../assets/pictures/sidebar admin/menu.png' style="height: 20px;">
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened" style="display: inline-flex;">
+      <img src='../../assets/pictures/sidebar admin/menu.png' style="height: 20px;">
+    </mat-icon>
+  </button>
+  <button style="height: 40px; width: 30px; margin-left: 10px; margin-right: 10px;" mat-button class="menu-button" routerLink="/profile">
+    <mat-icon style="display: inline-flex;">
+      <img src='../../assets/pictures/menu de arriba/aplicaciones.png' style="height: 20px;">
+    </mat-icon>
+    <!-- <span>Apps</span> -->
+  </button>
+  <button style="height: 40px; width: 30px; margin-left: 10px; margin-right: 10px;" mat-button class="menu-button" routerLink="/profile">
+    <mat-icon style="display: inline-flex;">
+      <img src='../../assets/pictures/menu de arriba/config.png' style="height: 20px;">
+    </mat-icon>
+    <!-- <span>Config</span> -->
+  </button>
+  <button style="height: 40px; width: 30px; margin-left: 10px; margin-right: 10px;" mat-button class="menu-button" routerLink="/profile">
+    <mat-icon style="display: inline-flex;">
+      <img src='../../assets/pictures/menu de arriba/empresa.png' style="height: 20px;">
+    </mat-icon>
+    <!-- <span>Empresa</span> -->
+  </button>
+  <button style="height: 40px; width: 30px; margin-left: 10px; margin-right: 10px;" mat-button class="menu-button" routerLink="/profile">
+    <mat-icon style="display: inline-flex;">
+      <img src='../../assets/pictures/menu de arriba/help.png' style="height: 20px;">
+    </mat-icon>
+    <!-- <span>Help</span> -->
+  </button>
+  <button style="height: 40px; width: 30px; margin-left: 10px; margin-right: 10px;" mat-button class="menu-button" routerLink="/profile">
+    <mat-icon style="display: inline-flex;">
+      <img src='../../assets/pictures/menu de arriba/mensaje.png' style="height: 20px;">
+    </mat-icon>
+    <!-- <span>Mensaje</span> -->
+  </button>
+  <button style="height: 40px; width: 30px; margin-left: 10px; margin-right: 10px;" mat-button class="menu-button" routerLink="/profile">
+    <mat-icon style="display: inline-flex;">
+      <img src='../../assets/pictures/menu de arriba/noti.png' style="height: 20px;">
+    </mat-icon>
+    <!-- <span>Notification</span> -->
+  </button>
+  <button style="height: 40px; width: 30px; margin-left: 10px; margin-right: 10px;" mat-button class="menu-button" routerLink="/profile">
+    <mat-icon style="display: inline-flex;">
+      <img src='../../assets/pictures/menu de arriba/select.png' style="height: 20px;">
+    </mat-icon>
+    <!-- <span>Select</span> -->
+  </button>
+  BDDO
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <img
+      class="avatar mat-elevation-z8"
+      src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+    />
+
+    <h4 class="name">John Smith</h4>
+    <p class="designation">ADMINISTRADOR</p>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/home">
+      <mat-icon style="display: inline-flex;">
+        <img src='../../assets/pictures/sidebar admin/dashboard.png' style="height: 20px;">
+      </mat-icon>
+      <span>Dashboard</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/profile">
+      <mat-icon style="display: inline-flex;">
+        <img src='../../assets/pictures/sidebar admin/calendario.png' style="height: 20px;">
+      </mat-icon>
+      <span>Calendario</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/profile">
+      <mat-icon style="display: inline-flex;">
+        <img src='../../assets/pictures/sidebar admin/documentos.png' style="height: 20px;">
+      </mat-icon>
+      <span>Documentos</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/profile">
+      <mat-icon style="display: inline-flex;">
+        <img src='../../assets/pictures/sidebar admin/empresa.png' style="height: 20px;">
+      </mat-icon>
+      <span>Empresa</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/profile">
+      <mat-icon style="display: inline-flex;">
+        <img src='../../assets/pictures/sidebar admin/solicitudes.png' style="height: 20px;">
+      </mat-icon>
+      <span>Solicitudes</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/profile">
+      <mat-icon style="display: inline-flex;">
+        <img src='../../assets/pictures/sidebar admin/sucursales-selected.png' style="height: 20px;">
+      </mat-icon>
+      <span>Sucursales</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/login">
+      <mat-icon style="display: inline-flex;">
+        <img src='../../assets/pictures/menu de arriba/log out.png' style="height: 20px;">
+      </mat-icon>
+      <span>Close</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <h2>ADMINISTRADOR</h2>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

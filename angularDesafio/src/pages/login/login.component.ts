@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 // import { UsersService } from "../users/users.service";
 
- import { Router, Routes } from '@angular/router';
+ import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -11,21 +12,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  // user: string;
-  // password: string;
+public loginForm!: FormGroup;
+user!: string;
+pass!: string;
 
- constructor(private route : Router) { }
+ constructor(
+  private formBuilder:FormBuilder, private route : Router,) { }
 
   ngOnInit(): void {
+    this.loginForm = this.formBuilder.group({
+      userName : ['', [Validators.required]],
+      password : ['', [Validators.required]]
+    });
   }
-  // login() {
-  //   const user = {email: this.user, password: this.password};
-  //   this.userService.login(user).subscribe( data => {
-  //     console.log(data);
-  //   });
 
 btnClick(){
-  this.route.navigate(["empleado"])
-}
+  this.user = this.loginForm.controls['userName'].value;
+  this.pass = this.loginForm.controls['password'].value;
+
+  if(this.user == 'juancito' && this.pass == '123456'){
+    this.route.navigate(['options'])
+    console.log('redireccion');
+
+  }else{
+    console.log('error');
+  }
 
 }
+
+
+}
+

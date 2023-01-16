@@ -1,59 +1,117 @@
-<div class="general">
-  <div class="img" style="margin-top: -50px">
-    <div style="margin-top: 200px; margin-left: 50px">
-      <span style="font-size: 50px; color: #6dd5ed">EN</span>
-      <span style="font-size: 50px; color: #fff">CODE</span>
-      <br />
-      <h2 style="margin-top: 20px; margin-left: 150px">¡Bienvenido de nuevo!</h2>
-      <br />
-      <p style="margin-top: 10px">
-        ¡Nos alegra verte de nuevo! Obtenga acceso a sus pedidos, lista de
-        deseos y recomendaciones
-      </p>
-      <hr style="width: 670px" />
-    </div>
-  </div>
-  <div class="formulario">
-    <div class="row title">
-      <div class="col-3">
-        <h2 class="mb-3 mt-3"> el rol</h2>
-      </div>
-    </div>
-    <div class="row lblpass">
-      <div class="col-3">
-        <div class="block">
-          <div class="btn btn4" routerLink="admin" routerLinkActive="active">
-            <h4>Administrador</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row lblpass">
-      <div class="col-3">
-        <div class="block">
-          <div class="btn btn4" routerLink="empleado" routerLinkActive="active">
-            <h4>Empleado</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row lblpass">
-      <div class="col-3">
-        <div class="block">
-          <div class="btn btn4" routerLink="rrhh" routerLinkActive="active">
-            <h4></h4>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row lblpass">
-      <div class="col-3">
-        <div class="block">
-          <div class="btn btn4" routerLink="seguridad" routerLinkActive="active">
-            <h4></h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<mat-toolbar class="mat-elevation-z8">
+  <button
+   mat-icon-button
+   *ngIf="sidenav.mode === 'over'"
+   (click)="sidenav.toggle()"
+ >
+   <mat-icon *ngIf="!sidenav.opened" style="display: inline-flex;">
+     <img src='../../assets/pictures/sidebar admin/menu.png' style="height: 20px;">
+   </mat-icon>
+   <mat-icon *ngIf="sidenav.opened" style="display: inline-flex;">
+     <img src='../../assets/pictures/sidebar admin/menu.png' style="height: 20px;">
+   </mat-icon>
+ </button>
+ <button style="height: 40px; width: 30px; margin-left: 10px; margin-right: 10px;" mat-button class="menu-button" routerLink="/profile">
+   <mat-icon style="display: inline-flex;">
+     <img src='../../assets/pictures/menu de arriba/aplicaciones.png' style="height: 20px;">
+   </mat-icon>
+   <!-- <span>Apps</span> -->
+ </button>
+ <button style="height: 40px; width: 30px; margin-left: 10px; margin-right: 10px;" mat-button class="menu-button" routerLink="/profile">
+   <mat-icon style="display: inline-flex;">
+     <img src='../../assets/pictures/menu de arriba/config.png' style="height: 20px;">
+   </mat-icon>
+   <!-- <span>Config</span> -->
+ </button>
+ <button style="height: 40px; width: 30px; margin-left: 10px; margin-right: 10px;" mat-button class="menu-button" routerLink="/profile">
+   <mat-icon style="display: inline-flex;">
+     <img src='../../assets/pictures/menu de arriba/empresa.png' style="height: 20px;">
+   </mat-icon>
+   <!-- <span>Empresa</span> -->
+ </button>
+ <button style="height: 40px; width: 30px; margin-left: 10px; margin-right: 10px;" mat-button class="menu-button" routerLink="/profile">
+   <mat-icon style="display: inline-flex;">
+     <img src='../../assets/pictures/menu de arriba/help.png' style="height: 20px;">
+   </mat-icon>
+   <!-- <span>Help</span> -->
+ </button>
+ <button style="height: 40px; width: 30px; margin-left: 10px; margin-right: 10px;" mat-button class="menu-button" routerLink="/profile">
+   <mat-icon style="display: inline-flex;">
+     <img src='../../assets/pictures/menu de arriba/mensaje.png' style="height: 20px;">
+   </mat-icon>
+   <!-- <span>Mensaje</span> -->
+ </button>
+ <button style="height: 40px; width: 30px; margin-left: 10px; margin-right: 10px;" mat-button class="menu-button" routerLink="/profile">
+   <mat-icon style="display: inline-flex;">
+     <img src='../../assets/pictures/menu de arriba/noti.png' style="height: 20px;">
+   </mat-icon>
+   <!-- <span>Notification</span> -->
+ </button>
+ <button style="height: 40px; width: 30px; margin-left: 10px; margin-right: 10px;" mat-button class="menu-button" routerLink="/profile">
+   <mat-icon style="display: inline-flex;">
+     <img src='../../assets/pictures/menu de arriba/select.png' style="height: 20px;">
+   </mat-icon>
+   <!-- <span>Select</span> -->
+ </button>
+ BDDO
+</mat-toolbar>
+
+<mat-sidenav-container>
+ <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+   <img
+     class="avatar mat-elevation-z8"
+     src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+   />
+
+   <h4 class="name">John Smith</h4>
+   <p class="designation">SEGURIDAD</p>
+
+   <mat-divider></mat-divider>
+
+   <button mat-button class="menu-button" routerLink="/home">
+     <mat-icon style="display: inline-flex;">
+       <img src='../../assets/pictures/sidebar admin/dashboard.png' style="height: 20px;">
+     </mat-icon>
+     <span>Dashboard</span>
+   </button>
+   <button mat-button class="menu-button" routerLink="/profile">
+     <mat-icon style="display: inline-flex;">
+       <img src='../../assets/pictures/sidebar seguridad/auditorias.png' style="height: 20px;">
+     </mat-icon>
+     <span>Auditorias</span>
+   </button>
+   <button mat-button class="menu-button" routerLink="/profile">
+     <mat-icon style="display: inline-flex;">
+       <img src='../../assets/pictures/sidebar seguridad/menu.png' style="height: 20px;">
+     </mat-icon>
+     <span>Menu</span>
+   </button>
+   <button mat-button class="menu-button" routerLink="/profile">
+     <mat-icon style="display: inline-flex;">
+       <img src='../../assets/pictures/sidebar seguridad/politicas.png' style="height: 20px;">
+     </mat-icon>
+     <span>Politicas</span>
+   </button>
+   <button mat-button class="menu-button" routerLink="/profile">
+     <mat-icon style="display: inline-flex;">
+       <img src='../../assets/pictures/sidebar seguridad/seguridad.png' style="height: 20px;">
+     </mat-icon>
+     <span>Seguridad</span>
+   </button>
+
+   <mat-divider></mat-divider>
+
+   <button mat-button class="menu-button" routerLink="/login">
+     <mat-icon style="display: inline-flex;">
+       <img src='../../assets/pictures/menu de arriba/log out.png' style="height: 20px;">
+     </mat-icon>
+     <span>Close</span>
+   </button>
+ </mat-sidenav>
+ <mat-sidenav-content>
+   <div class="content mat-elevation-z8">
+    <h2>SEGURIDAD</h2>
+     <router-outlet></router-outlet>
+   </div>
+ </mat-sidenav-content>
+</mat-sidenav-container>

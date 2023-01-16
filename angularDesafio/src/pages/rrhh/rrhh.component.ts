@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-rrhh',
   templateUrl: './rrhh.component.html',
-  styleUrls: ['./rrhh.component.css']
+  styleUrls: ['./rrhh.component.scss']
 })
 export class RrhhComponent implements OnInit {
 
