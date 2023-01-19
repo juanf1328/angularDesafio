@@ -55,6 +55,9 @@ h4 {
   align-items: center;
   /* margin: 15px; */
 }
+h4{
+  color: #fff;
+}
 .btn {
   height: 50px;
   width: 130px;
@@ -63,8 +66,8 @@ h4 {
   align-items: center;
   transition: all 0.8s ease;
   position: relative;
-  border: 2px solid #6dd5ed;
-  background-color: #6dd5ed;
+  border: 2px none #022f3d;
+  background: linear-gradient(to bottom, #6ae3fc, #0d323d);
   margin: 10 30px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
