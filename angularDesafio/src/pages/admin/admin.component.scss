@@ -26,7 +26,7 @@ span{
   min-height: fit-content;
 }
 button{
-  background-color: #a8e5f348;
+  background-color: #a8e5f31c;
 }
 mat-sidenav {
   margin: 16px;
@@ -41,6 +41,11 @@ mat-sidenav {
   min-height: fit-content;
   max-height: 100%;
 }
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+  min-width:fit-content;
+  min-height: fit-content;
+}
 
 .content {
   height: calc(100vh - 130px);
@@ -53,11 +58,6 @@ mat-sidenav {
   min-height: fit-content;
 }
 
-mat-sidenav-container {
-  height: calc(100vh - 65px);
-  min-width:fit-content;
-  min-height: fit-content;
-}
 
 .menu-button {
   width: 100%;
@@ -95,6 +95,5 @@ mat-divider {
   margin-bottom: 16px;
   min-width:fit-content;
   min-height: fit-content;
-  // background-color: rgba(255, 255, 255, 0.5);
 }
 

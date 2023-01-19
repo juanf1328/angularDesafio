@@ -37,12 +37,8 @@ const routes: Routes = [
     pathMatch: "full"
   },
   {
-    path: 'error',
-    component: ErrorComponent,
-  },
-  {
     path: '**',
-    redirectTo: '',
+    component: ErrorComponent ,
   },
 ];
 
